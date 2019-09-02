@@ -1,0 +1,72 @@
+getwd()
+setwd(“drive location”)
+library("rLiDAR")
+LASfile <- “your file in .las"
+LAS<-readLAS(LASfile,short=TRUE)
+xyz<-subset(LAS[,1:3])
+View(LAS)
+View(xyz)
+clLAS<-kmeans(xyz, 1)
+id<-as.factor(clLAS$cluster)
+alpha<-1.0
+plotit=TRUE
+col="forestgreen"
+xyzid<-cbind(xyz,id)
+library(rgl)
+
+open3d()
+volumeList<-chullLiDAR3D(xyzid=xyzid, plotit=plotit, col=col,alpha=alpha)
+summary(volumeList)
+plot3d(xyzid[,1:3], add=TRUE)
+axes3d(c("x+", "y-", "z-"))
+grid3d(side=c('x+', 'y-', 'z'), col="gray")
+title3d(main="crown volume", xlab = "x", ylab = "y", zlab = "z", col="blue")
+
+open3d()
+library("rLiDAR")
+LASfile <- "your file in .las"
+LAS<-readLAS(LASfile,short=TRUE)
+xyz<-LAS[,1:3]
+ones <- matrix(1,dim(xyz)[1],1)
+xyz0 <- xyz-cbind(ceiling(mean(xyz[,1]))*ones,ceiling(mean(xyz[,2]))*ones,ceiling(mean(xyz[,3]))*ones)
+library("alphashape3d")
+ashape3d.obj <- ashape3d(as.matrix(xyz0), alpha = 1000)
+plot(ashape3d.obj, transparency = 0.75, col="forestgreen", edges = FALSE, vertices = FALSE)
+V <- volume_ashape3d(ashape3d.obj)
+summary(V)
+plot3d(xyz0[,1:3], add=TRUE,  col="black")
+axes3d(c("x+", "y-", "z-"), labels=TRUE, col="grey12")
+grid3d(side=c('x+', 'y-', 'z'), col="grey40")
+title3d(main="convexhull", xlab = "x", ylab = "y", zlab = "z", col="blue")
+
+#alpha 0.25
+open3d()
+LASfile <- "your file in .las"
+LAS<-readLAS(LASfile,short=TRUE)
+xyz<-subset(LAS[,1:3])
+View(LAS)
+View(xyz)
+clLAS<-kmeans(xyz, 1)
+id<-as.factor(clLAS$cluster)
+alpha<-0.25
+plotit=TRUE
+col="forestgreen"
+xyzid<-cbind(xyz,id)
+library(rgl)
+
+open3d()
+volumeList<-chullLiDAR3D(xyzid=xyzid, plotit=plotit, col=col,alpha=alpha)
+summary(volumeList)
+plot3d(xyzid[,1:3], add=TRUE)
+axes3d(c("x+", "y-", "z-"))
+grid3d(side=c('x+', 'y-', 'z'), col="gray")
+title3d(main="crown volume", xlab = "x", ylab = "y", zlab = "z", col="blue")
+open3d()
+ashape3d.obj <- ashape3d(as.matrix(xyz0), alpha = 0.25)
+plot(ashape3d.obj, transparency = 0.75, col="forestgreen", edges = FALSE, vertices = FALSE)
+V <- volume_ashape3d(ashape3d.obj)
+summary(V)
+plot3d(xyz0[,1:3], add=TRUE,  col="black")
+axes3d(c("x+", "y-", "z-"), labels=TRUE, col="grey12")
+grid3d(side=c('x+', 'y-', 'z'), col="grey40")
+title3d(main="alpha 0.25", xlab = "x", ylab = "y", zlab = "z", col="blue")
