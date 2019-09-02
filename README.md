@@ -3,7 +3,9 @@ codes for crown-volume calculation with SfM point clouds including convex hull a
 the Alphashape3D (Lafarge and Pateiro-Lopez 2014) and rLiDAR (chullLiDAR2D, Silva et al. 2017) packages. In convex hull, it constructs an envelope by considering the number of input points belongs to the convex hull to represent the outward curving shape of tree crowns. In the alpha shape approach, a predefined and reduced alpha value serves as size criterion to construct more details, thus shrinking the corresponding convex hull closer down to the 3D point cloud (Pateiro-Lopez and Rodriguez-Casal 2010; Colaço et al. 2017). I calculated the crown volumes for both trees and oil palms with a convex hull algorithm and alpha shape algorithms, the latter using the alpha values 0.75, 0.50 and 0.25. You can find more information and usages of this parameter in this article;
 
 Drone-based photogrammetry derived crown metrics for predicting tree and oil palm water use
+
 https://doi.org/10.1002/eco.2115
+
 Joyson Ahongshangbam*, Watit Khokthong*, Florian Ellsäßer, Hendrayanto, Dirk Hölscher, Alexander Röll
  *authors contributed equalliy to the manuscript
 
