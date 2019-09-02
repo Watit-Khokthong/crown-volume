@@ -4,7 +4,7 @@ the Alphashape3D (Lafarge and Pateiro-Lopez 2014) and rLiDAR (chullLiDAR2D, Silv
 
 You can find more information and usages of this parameter in this article;
 
-Drone-based photogrammetry derived crown metrics for predicting tree and oil palm water use
+Drone‐based photogrammetry‐derived crown metrics for predicting tree and oil palm water use
 
 https://doi.org/10.1002/eco.2115
 
