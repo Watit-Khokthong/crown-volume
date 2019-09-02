@@ -7,9 +7,11 @@ Drone-based photogrammetry derived crown metrics for predicting tree and oil pal
 https://doi.org/10.1002/eco.2115
 
 Joyson Ahongshangbam*, Watit Khokthong*, Florian Ellsäßer, Hendrayanto, Dirk Hölscher, Alexander Röll
+
  *authors contributed equalliy to the manuscript
 
 References of codes;
+
 Colaço, A. F., Trevisan, R. G., Molin, J. P., Rosell-Polo, J. R., & Escolà, A. 2017. A method to obtain orange crop geometry information using a mobile terrestrial laser scanner and 3D modeling. Remote Sensing 9(8): 10–13.
 
 Lafarge, T., & Pateiro-Lopez, B. 2014. Alphashape3d: Implementation of the 3D Alpha-Shape for the Reconstruction of 3D Sets from a Point Cloud. R package version.
