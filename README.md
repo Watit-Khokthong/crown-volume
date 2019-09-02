@@ -5,7 +5,7 @@ the Alphashape3D (Lafarge and Pateiro-Lopez 2014) and rLiDAR (chullLiDAR2D, Silv
 Drone-based photogrammetry derived crown metrics for predicting tree and oil palm water use
 https://doi.org/10.1002/eco.2115
 Joyson Ahongshangbam*, Watit Khokthong*, Florian Ellsäßer, Hendrayanto, Dirk Hölscher, Alexander Röll
-* authors contributed equalliy to the manuscript
+ *authors contributed equalliy to the manuscript
 
 References of codes;
 Colaço, A. F., Trevisan, R. G., Molin, J. P., Rosell-Polo, J. R., & Escolà, A. 2017. A method to obtain orange crop geometry information using a mobile terrestrial laser scanner and 3D modeling. Remote Sensing 9(8): 10–13.
